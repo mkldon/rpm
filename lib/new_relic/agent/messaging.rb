@@ -321,7 +321,7 @@ module NewRelic
                                         &block
 
         wrap_message_broker_consume_transaction library: library,
-                                                destination_type: :exchange,
+                                                destination_type: :queue,
                                                 destination_name: Instrumentation::Bunny.exchange_name(destination_name),
                                                 routing_key: delivery_info[:routing_key],
                                                 reply_to: message_properties[:reply_to],
